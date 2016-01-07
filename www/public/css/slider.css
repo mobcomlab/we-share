@@ -1,0 +1,20 @@
+ul{
+	list-style: none outside none;
+}
+.content-slider li{
+	background-color: #ffffff;
+	text-align: center;
+	color: #FFF;
+}
+.content-slider h3 {
+}
+.demo:visited{
+	width: 100%;
+	background: #ffffff;
+}
+#bgsss{
+    background: #000000;
+    color: #ffffff;
+    width: 500;
+    height: 200;
+}

@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+	Header unset Pragma
+	FileETag None
+	Header unset ETag
+
+	# cache images/pdf docs for 10 days
+	<FilesMatch "\.(js|css)$">
+	Header set Cache-Control "max-age=864000, public, must-revalidate"
+	</FilesMatch>
+</IfModule>
+
+
